@@ -1,52 +1,21 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <mt-button @click.native="startHacking">Let's do it</mt-button>
+  <div>
+    <mt-header fixed title="固定在顶部"></mt-header>
+    <demo></demo>
+    <tabbar></tabbar>
   </div>
 </template>
 
 <script>
+import Demo from './components/Demo'
+import Tabbar from './components/Tabbar'
+
 export default {
   name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
-  methods: {
-    startHacking () {
-      this.$toast('It Works!')
-    }
+  components: {
+    Demo,
+    Tabbar
   }
 }
+
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>
